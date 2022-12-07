@@ -5,9 +5,13 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.concurrent.*;
 
-public class ExampleExecutorServiceWithCallable {
+public class B_ExampleExecutorServiceSyncAsync {
 
     public static void main(String[] args) throws Exception {
+        run();
+    }
+
+    public static void run() throws Exception {
         record ImportSave(String server, Integer amount) {
         }
         Callable<ImportSave> fetchImportSaveA = () -> {
@@ -50,7 +54,7 @@ public class ExampleExecutorServiceWithCallable {
         System.out.println(bestImportSave2);
         Instant end2 = Instant.now();
         Duration duration2 = Duration.between(begin2, end2);
-        System.out.println("Best quotation [ES   ] = " + bestImportSave2 + " in " + duration2.toMillis() + " ms");
+        System.out.println("Best quotation [SYNC   ] = " + bestImportSave2 + " in " + duration2.toMillis() + " ms");
 
     }
 
