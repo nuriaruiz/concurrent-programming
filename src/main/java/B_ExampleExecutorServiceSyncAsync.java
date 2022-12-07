@@ -41,7 +41,7 @@ public class B_ExampleExecutorServiceSyncAsync {
         System.out.println(bestImportSave);
         Instant end = Instant.now();
         Duration duration = Duration.between(begin, end);
-        System.out.println("Best quotation [ES   ] = " + bestImportSave + " in " + duration.toMillis() + " ms");
+        System.out.println("Best server [ES ASYNC  ] = " + bestImportSave + " in " + duration.toMillis() + " ms");
 
         // RUNNING THE CALLABLES TASK NOT IN PARALLEL
         Instant begin2 = Instant.now();
@@ -54,7 +54,7 @@ public class B_ExampleExecutorServiceSyncAsync {
         System.out.println(bestImportSave2);
         Instant end2 = Instant.now();
         Duration duration2 = Duration.between(begin2, end2);
-        System.out.println("Best quotation [SYNC   ] = " + bestImportSave2 + " in " + duration2.toMillis() + " ms");
+        System.out.println("Best server [ES SYNC   ] = " + bestImportSave2 + " in " + duration2.toMillis() + " ms");
 
     }
 

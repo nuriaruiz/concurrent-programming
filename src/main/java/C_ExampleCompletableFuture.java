@@ -39,7 +39,7 @@ public class C_ExampleCompletableFuture {
         ImportSave bestImportSave = importSaves.stream().min(Comparator.comparing(ImportSave::amount)).get();
         Instant end = Instant.now();
         Duration duration = Duration.between(begin, end);
-        System.out.println("Best quotation [ES   ] = " + bestImportSave + " in " + duration.toMillis() + " ms");
+        System.out.println("Best server [ASYNC   ] = " + bestImportSave + " in " + duration.toMillis() + " ms");
     }
 
     private static ImportSave doImportA() {
